@@ -1,0 +1,76 @@
+FORMAT: 1A
+HOST: http://localhost:3000
+
+# MinKNOW WebSocket API
+
+The streaming data API for MinKNOW.
+
+
+# Group EngineStates
+
+Reports the status of the current instance of MinKNOW.
+
+## Websocket [/]
+Requests through a websocket connection
+
+### EngineState Request [GET]
+
++ engine_state (boolean) - Turn on engine state data (1)
+
++ Request with body (application/json)
+
+    + Body
+
+        {
+            "engine_state": "1"
+        }
+
++ Response 200 (application/json)
+
+    + Body
+
+        {
+            "id": "1",
+            "result": {
+                "asic_id": "63041",
+                "exp_script_hash": "714a36f1a098e166f044da9b48618a501279699e",
+                "real_sample_rate": "3012",
+                "asic_id_eeprom": "0",
+                "bias_voltage_gain": "5",
+                "bias_voltage_offset": "0",
+                "asic_id_full": "4176934465",
+                "yield": "437354176",
+                "current_script": "python/recipes/map/NC_48Hr_Sequencing_Run_FLO_MAP103.py",
+                "output_dir": "E:\\data",
+                "sample_id": "full_software_test",
+                "daq_start_time": "1459964567",
+                "machine_id": "MINICOL145",
+                "daq_stop_time": "1459964554",
+                "minion_id": "MN16024",
+                "current_thermo_onoff": "0",
+                "flow_cell_id": "FAA103713",
+                "disk_usage": "",
+                "status": "processing",
+                "minion_asic_temperature": "24.3425331",
+                "context_tags": {
+                    "user_filename_input": "full_software_test",
+                    "sample_frequency": "3012",
+                    "experiment_kit": "genomic_dna",
+                    "filename": "minicol145_20160406_fnfaa103713_mn16024_sequencing_run_full_software_test_10707"
+                },
+                "minion_hardware_version": "2.5.1",
+                "exp_script_purpose": "sequencing_run",
+                "set_bias_voltage": "-160",
+                "processing_start_time": "1",
+                "data_set": "MINICOL145_20160406_FNFAA103713_MN16024_sequencing_run_full_software_test_10707",
+                "set_temperature": "37",
+                "read_bias_voltage": "-160",
+                "data_set_method": "USER",
+                "test_current": "0",
+                "minion_heatsink_temperature": "37.0078125",
+                "integration_capacitor": "250.0",
+                "protocol_ui": "",
+                "version_string": "0.51.3 b201604061133"
+            },
+          "error": "0"
+        }
